@@ -30,4 +30,9 @@ flutter main.dart
    결과적으로는 안된다는 내용이고
    이유는 함수는 호출 할 때 마다 다시 작동을 하기 때문임 checks() 함수에 ranNum()을 넣을경우
    처음 ranNum()에서 myNum으로 넘겨준 값과 checks() 함수에서 ranNum()을 다시 호출한 값이 다름
-   
+
+## 예외처리
+1. howMuch += prices[item] ?? 0;
+   - 없는 상품일 경우 null이 반환됨 ?? 0 으로 예외처리함
+3. Set<int> lotto = {}; while (lotto.length < 6) {lotto.add(random.nextInt(45) + 1);
+   - 중복된 로또 번호를 방지하기 위해 Set<int> lotto = {} 으로 예외처리함
