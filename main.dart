@@ -87,7 +87,7 @@ List<int> ranNum() {
 }
 
 // check = checks()
-// 랜덤넘버와 당첨번호 비교하여 일치하는 개수를 셈
+// 마이넘버와 당첨번호를 비교하여 일치하는 개수를 셈
 int checks(List<int> myNum, List<int> lottoNum) {
   int count = 0;
   // ranNum에서 lottoNum과 일치할 경우 일치 개수 1씩 증가
