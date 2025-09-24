@@ -81,13 +81,13 @@ List<int> ranNum() {
   while (lotto.length < 6) {
     lotto.add(random.nextInt(45) + 1);
   }
-  // 뽑은 번호를 List로 변환
+  //뽑은 번호를 List로 변환
   List<int> result = lotto.toList();
   return result;
 }
 
 // check = checks()
-// 마이넘버와 당첨번호를 비교하여 일치하는 개수를 셈
+// 마이넘버와 당첨번호 비교하여 일치하는 개수를 셈
 int checks(List<int> myNum, List<int> lottoNum) {
   int count = 0;
   // ranNum에서 lottoNum과 일치할 경우 일치 개수 1씩 증가
