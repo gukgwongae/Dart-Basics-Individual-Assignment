@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/material.dart';
 
 void main() {
   print('---------------------------------------');
@@ -44,28 +45,30 @@ void main() {
 
   print('도전문제');
 
-  List<int> myNum = ranNum(); // 무작위 로또 번호를 함수로 분리
-  print('발급한 로또 번호 : $myNum');
-
   List<int> lottoNum = [9, 19, 29, 35, 37, 38]; // 당첨 번호
-  int check = checks(myNum, lottoNum); // 무작위 내 번호와 당첨 번호를 확인
 
-  String result; // 확인 결과에 따른 당첨 결과
-  if (check >= 5) {
-    result = '1등';
-  } else if (check == 4) {
-    result = '2등';
-  } else if (check == 3) {
-    result = '3등';
-  } else {
-    result = '당첨 실패!';
+  for (int i = 1; i < 6; i++) {
+    // 무작위 로또 번호를 함수로 분리
+    List<int> myNum = ranNum();
+    print('$i번째 발급된 로또 번호 : $myNum');
+
+    int check = checks(myNum, lottoNum); // 무작위 내 번호와 당첨 번호를 확인
+
+    String result; // 확인 결과에 따른 당첨 결과
+    if (check >= 5) {
+      result = '1등';
+    } else if (check == 4) {
+      result = '2등';
+    } else if (check == 3) {
+      result = '3등';
+    } else {
+      result = '당첨 실패!';
+    }
+    print('당첨 여부 : $result');
+
+    myNum.clear(); // 당첨 결과 확인 후 무작위 내 번호 초기화
+    print('현재 발급된 로또 번호 : $myNum');
   }
-
-  print('당첨 여부 : $result');
-
-  myNum.clear(); // 당첨 결과 확인 후 무작위 내 번호 초기화
-
-  print('현재 발급된 로또 번호 : $myNum');
   print('---------------------------------------');
 }
 
